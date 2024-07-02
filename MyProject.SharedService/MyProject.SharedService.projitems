@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>fbdff967-ab7f-44d5-8e55-a1eee78598c8</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>MyProject.SharedService</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)ModelDto\Roles\Commands\CreateRoleRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ModelDto\Roles\Commands\CreateRoleResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ModelDto\Roles\Commands\DeleteRoleRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ModelDto\Roles\Commands\DeleteRoleResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ModelDto\Roles\Commands\UpdateRoleRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ModelDto\Roles\Commands\UpdateRoleResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ModelDto\Roles\Queries\GetAllRolesRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ModelDto\Roles\Queries\GetAllRolesResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ModelDto\Roles\Queries\GetRoleByIdRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ModelDto\Roles\Queries\GetRoleByIdResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ModelDto\Users\Commands\CreateUserRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ModelDto\Users\Commands\CreateUserResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ModelDto\Users\Commands\DeleteUserRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ModelDto\Users\Commands\DeleteUserResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ModelDto\Users\Commands\UpdateUserRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ModelDto\Users\Commands\UpdateUserResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ModelDto\Users\Queries\GetAllUsersRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ModelDto\Users\Queries\GetAllUsersResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ModelDto\Users\Queries\GetUserByIdRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ModelDto\Users\Queries\GetUserByIdResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\Paginated.cs" />
+  </ItemGroup>
+</Project>
