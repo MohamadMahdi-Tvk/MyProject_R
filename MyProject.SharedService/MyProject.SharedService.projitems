@@ -19,6 +19,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)ModelDto\Roles\Queries\GetAllRolesResponse.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ModelDto\Roles\Queries\GetRoleByIdRequest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ModelDto\Roles\Queries\GetRoleByIdResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ModelDto\Roles\Queries\GetRolesForUserCreateResponse.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ModelDto\Users\Commands\CreateUserRequest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ModelDto\Users\Commands\CreateUserResponse.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ModelDto\Users\Commands\DeleteUserRequest.cs" />

@@ -1,0 +1,23 @@
+﻿@using MyProject.SharedService.ModelDto.Users.Commands
+@model CreateUserRequest
+
+@{
+    ViewData["Title"] = "ثبت نام کاربر";
+
+}
+
+
+<form asp-controller="User" asp-action="Create" method="post">
+    <label asp-for="FirstName" class="form-label m-1"></label>
+    <input type="text" class="form-control m-1" asp-for="FirstName" />
+
+    <label asp-for="LastName" class="form-label m-1"></label>
+    <input type="text" class="form-control m-1" asp-for="LastName" />
+
+
+    <label class="form-label m-1">نقش کاربری</label>
+    <select class="form-control m-1" name="RoleId" asp-items="@ViewBag.Roles"></select>
+
+    <input class="btn btn-success m-1" type="submit" value="افزودن" />
+</form>
+

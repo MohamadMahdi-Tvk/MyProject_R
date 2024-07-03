@@ -1,3 +1,3 @@
 ﻿namespace MyProject.SharedService.ModelDto.Users.Commands;
 
-public record CreateUserRequest(string FirstName, string LastName);
+public record CreateUserRequest(string FirstName, string LastName, int RoleId);

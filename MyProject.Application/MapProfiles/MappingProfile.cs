@@ -29,7 +29,9 @@ public class MappingProfile : Profile
 
         CreateMap<Role, CreateRoleRequest>().ReverseMap();
 
-        CreateMap<Role,UpdateRoleRequest>().ReverseMap();
+        CreateMap<Role, UpdateRoleRequest>().ReverseMap();
+
+        CreateMap<Role, GetRolesForUserCreateResponse>().ReverseMap();
 
         #endregion
     }
