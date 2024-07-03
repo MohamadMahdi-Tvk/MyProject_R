@@ -37,8 +37,24 @@ namespace MyProject.MVC.Controllers
         {
             var model = await _mediator.Send(new CreateUserCommand(request, cancellationToken));
 
-            return RedirectToAction("GetAll");
+            return RedirectToAction(nameof(GetAll));
 
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Update(GetUserByIdRequest request, CancellationToken cancellationToken)
+        {
+            var model = await _mediator.Send(new GetUserByIdQuery(request, cancellationToken));
+            ViewBag.roles = new SelectList(await _mediator.Send(new GetRolesForUserCreateQuery(cancellationToken)), "Id", "Title");
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Update(UpdateUserRequest request, CancellationToken cancellationToken)
+        {
+            await _mediator.Send(new UpdateUserCommand(request, cancellationToken));
+
+            return RedirectToAction(nameof(GetAll));
         }
     }
 }

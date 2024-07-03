@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using MyProject.DataAccess.Context;
 using MyProject.DataAccess.GenericRepository;
 using MyProject.DataAccess.Models;
@@ -14,5 +15,7 @@ public class UserRepository : Repository<User>, IUserRepository
 {
     public UserRepository(DataBaseContext context, ILogger logger) : base(context, logger)
     {
-    }    
+    }
+
+    
 }

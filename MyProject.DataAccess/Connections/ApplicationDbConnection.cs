@@ -20,6 +20,11 @@ public class ApplicationReadDbConnection : IApplicationReadDbConnection, IDispos
         return (await connection.QueryAsync<T>(sql, param, transaction, commandType: commandType)).AsList();
     }
 
+    public async Task<T> QueryFirstAsync<T>(string sql, object? param = null, IDbTransaction? transaction = null, CommandType commandType = CommandType.Text, CancellationToken cancellationToken = default)
+    {
+        return await connection.QueryFirstAsync<T>(sql, param, transaction, commandType: commandType);
+    }
+
     public async Task<GridReader> QueryMultipleAsync<T>(string sql, object? param = null, IDbTransaction? transaction = null, CommandType commandType = CommandType.Text, CancellationToken cancellationToken = default)
     {
         return (await connection.QueryMultipleAsync(sql, param, transaction, commandType: commandType));

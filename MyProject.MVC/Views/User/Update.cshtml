@@ -1,0 +1,37 @@
+﻿@using MyProject.SharedService.ModelDto.Users.Queries
+@model GetUserByIdResponse
+
+@{
+    ViewData["Title"] = "ویرایش";
+}
+
+<table class="table table-bordered table-hover">
+    <form asp-controller="User" asp-action="Update">
+
+    <tr>
+        <td>نام</td>
+        <td>نام خانوادگی</td>
+        <td>نقش کاربری</td>
+    </tr>
+    <tr>
+        <td>
+            <input class="form-control m-1" asp-for="@Model.FirstName" />
+        </td>
+
+        <td>
+            <input class="form-control m-1" asp-for="@Model.LastName" />
+        </td>
+
+        <td>
+                <p>نقش فعلی کاربر : <span class="text-primary">@Model.Title</span></p>
+            <select asp-items="@ViewBag.Roles" name="RoleId" class="form-control m-1"></select>
+       
+        </td>
+    </tr>
+
+
+
+    <input type="submit" class="btn btn-success m-2" value="ثبت ویرایش" />
+    </form>
+</table>
+
