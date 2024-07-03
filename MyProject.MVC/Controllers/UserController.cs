@@ -56,5 +56,19 @@ namespace MyProject.MVC.Controllers
 
             return RedirectToAction(nameof(GetAll));
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Delete(DeleteUserRequest request, CancellationToken cancellationToken)
+        {
+            await _mediator.Send(new DeleteUserCommand(request, cancellationToken));
+
+            return RedirectToAction(nameof(GetAll));
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Info(GetUserInfoByIdRequest request, CancellationToken cancellationToken)
+        {
+            return View(await _mediator.Send(new GetUserInfoByIdQuery(request, cancellationToken)));
+        }
     }
 }

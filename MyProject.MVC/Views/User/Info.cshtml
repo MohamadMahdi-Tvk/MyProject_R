@@ -1,0 +1,35 @@
+﻿@using MyProject.SharedService.ModelDto.Users.Queries
+@model GetUserInfoByIdResponse
+
+@{
+    ViewData["Title"] = "جزئیات کاربر";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <td>آیدی</td>
+        <td>نام</td>
+        <td>نام خانوادگی</td>
+        <td>نقش کاربر</td>
+        <td>تاریخ درج</td>
+        <td>فعال</td>
+    </tr>
+    <tr>
+        <td>@Model.Id</td>
+        <td>@Model.FirstName</td>
+        <td>@Model.LastName</td>
+        <td>@Model.RoleTitle</td>
+        <td>@Model.InsertDate</td>
+
+        @if (Model.IsDeleted == false)
+        {
+            <td><span class="text-success">فعال</span></td>
+        }
+        else
+        {
+            <td><span class="text-danger">غیرفعال</span></td>
+        }
+
+    </tr>
+</table>
+
