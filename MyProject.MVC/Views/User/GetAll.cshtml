@@ -1,0 +1,42 @@
+﻿@using MyProject.SharedService.ModelDto.Users.Queries
+@using MyProject.SharedService.Utilities
+@model Paginated<GetAllUsersResponse>
+
+
+@{
+    ViewData["Title"] = "اسامی نفرات";
+}
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>آیدی</th>
+        <th>نام</th>
+        <th>نام خانوادگی</th>
+    </tr>
+
+    @foreach (var user in Model.data)
+    {
+        <tr>
+            <td>@user.Id</td>
+            <td>@user.FirstName</td>
+            <td>@user.LastName</td>
+        </tr>
+    }
+
+</table>
+
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+
+
+        @for (int i = 1; i <= Model.totalPages; i++)
+        {
+            <li class="page-item"><a class="page-link" href="/User/GetAll?PageNumber=@i">@i</a></li>
+        }
+        @* <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li> *@
+    </ul>
+</nav>

@@ -1,3 +1,3 @@
 ﻿namespace MyProject.SharedService.ModelDto.Users.Queries;
 
-public record GetAllUsersRequest(int pageNumber, int pageSize, string query);
+public record GetAllUsersRequest(int pageNumber = 1, int pageSize = 5, string query = "");

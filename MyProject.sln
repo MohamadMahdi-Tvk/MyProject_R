@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sql Procedures", "Sql Proce
 		GetAllUsers.sql = GetAllUsers.sql
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyProject.MVC", "MyProject.MVC\MyProject.MVC.csproj", "{76C851C7-FC9F-4552-BD6A-1DE2024CAD01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{8BE55FE2-C268-4456-8E26-700D2C42E2A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BE55FE2-C268-4456-8E26-700D2C42E2A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BE55FE2-C268-4456-8E26-700D2C42E2A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76C851C7-FC9F-4552-BD6A-1DE2024CAD01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76C851C7-FC9F-4552-BD6A-1DE2024CAD01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76C851C7-FC9F-4552-BD6A-1DE2024CAD01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76C851C7-FC9F-4552-BD6A-1DE2024CAD01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +52,7 @@ Global
 		{73F7999E-F3BD-4A10-A730-8758385D8D35} = {BD73AA30-C96B-4BE0-98D0-A6E162F55D52}
 		{FBDFF967-AB7F-44D5-8E55-A1EEE78598C8} = {BD73AA30-C96B-4BE0-98D0-A6E162F55D52}
 		{8BE55FE2-C268-4456-8E26-700D2C42E2A8} = {BD73AA30-C96B-4BE0-98D0-A6E162F55D52}
+		{76C851C7-FC9F-4552-BD6A-1DE2024CAD01} = {BD73AA30-C96B-4BE0-98D0-A6E162F55D52}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C983F488-F337-42B4-BA5F-0481C20CEAC9}
