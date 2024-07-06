@@ -7,7 +7,33 @@
     ViewData["Title"] = "اسامی نفرات";
 }
 
-<a class="btn btn-primary m-2" asp-controller="User" asp-action="Create">افزودن کاربر</a>
+<div class="container-fluid">
+
+    <div class="row">
+
+        <div class="col">
+
+            <form asp-controller="User" asp-action="GetAll" method="get">
+
+                <div class="col-5">
+
+                    <input type="text" class="form-control m-1" name="query" placeholder="متن جستجو را در این کادر وارد نمائید ..." />
+
+                </div>
+
+                <div class="col-3">
+                    <a class="btn btn-primary m-2" asp-controller="User" asp-action="Create">افزودن کاربر</a>
+                    <input type="submit" class="btn btn-success m-1" value="جستجو" />
+
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
 
 <table class="table table-bordered table-hover">
     <tr>

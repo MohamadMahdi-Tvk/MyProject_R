@@ -8,7 +8,7 @@ namespace MyProject.DataAccess.DomainRepository;
 
 public interface IUserRepository : IRepository<User>
 {
-    
+    Task<User> GetUserWithRoles(int Id);
 }
 
 public class UserRepository : Repository<User>, IUserRepository
@@ -17,5 +17,11 @@ public class UserRepository : Repository<User>, IUserRepository
     {
     }
 
-    
+    public async Task<User> GetUserWithRoles(int Id)
+    {
+        var user = await _context.Users.Include(p => p.Role)
+             .SingleOrDefaultAsync(p => p.Id == Id);
+
+        return user;
+    }
 }
