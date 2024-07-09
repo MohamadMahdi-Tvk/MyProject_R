@@ -18,4 +18,8 @@
     <ProjectReference Include="..\MyProject.Application\MyProject.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Images\Users\Profiles\" />
+  </ItemGroup>
+
 </Project>

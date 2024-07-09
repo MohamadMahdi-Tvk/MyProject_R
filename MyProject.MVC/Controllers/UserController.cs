@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using MyProject.Application.Services.Roles.Commands;
-using MyProject.Application.Services.Roles.Queries;
 using MyProject.Application.Services.Users.Commands;
 using MyProject.Application.Services.Users.Queries;
 using MyProject.SharedService.ModelDto.Users.Commands;
