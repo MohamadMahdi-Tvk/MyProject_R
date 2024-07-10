@@ -18,6 +18,13 @@ namespace MyProject.WebService.Controllers
 
 
         [HttpPost]
+        [Route(nameof(GetUserBySearch))]
+        public async Task<List<GetUserBySearchResponse>> GetUserBySearch(GetUserBySearchRequest request, CancellationToken cancellationToken)
+        {
+            return await _mediator.Send(new GetUserBySearchQuery(request, cancellationToken));
+        }
+
+        [HttpPost]
         [Route(nameof(GetAll))]
         public async Task<Paginated<GetAllUsersResponse>> GetAll(GetAllUsersRequest request, CancellationToken cancellationToken)
         {

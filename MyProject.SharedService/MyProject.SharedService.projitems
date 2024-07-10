@@ -30,6 +30,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)ModelDto\Users\Queries\GetAllUsersResponse.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ModelDto\Users\Queries\GetUserByIdRequest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ModelDto\Users\Queries\GetUserByIdResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ModelDto\Users\Queries\GetUserBySearchRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ModelDto\Users\Queries\GetUserBySearchResponse.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ModelDto\Users\Queries\GetUserInfoByIdRequest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ModelDto\Users\Queries\GetUserInfoByIdResponse.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utilities\Paginated.cs" />
